@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../link-tree1"
+		},
+		{
+			"path": "../projeto-harpia/HTMLS"
+		},
+		{
+			"path": "../tranformes"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "HTMLS"
+	}
+}
