@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #e5e5e5;
+  font-family: Georgia, serif;
+}
+
+.container {
+  width: 260px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: linear-gradient(#ddd, #8e7bd3);
+}
+
+/* HEADER */
+
+header {
+  background: #4b3b90;
+  color: white;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  position: relative;
+}
+
+/* HOVERS */
+
+.logo,
+.menu,
+.navbar a,
+.card,
+.card button,
+form button,
+.redes a img {
+  transition: 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.08);
+  opacity: 0.8;
+}
+
+.menu:hover {
+  transform: scale(1.15);
+  color: #ddd;
+}
+
+.navbar a:hover {
+  background: white;
+  color: #4b3b90;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.card:hover img {
+  transform: scale(1.03);
+}
+
+.card button:hover,
+form button:hover {
+  transform: scale(1.08);
+  background: linear-gradient(to right, #8e7bd3, white);
+}
+
+input:hover,
+textarea:hover {
+  box-shadow: 0 0 8px rgba(75, 59, 144, 0.6);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(75, 59, 144, 0.9);
+}
+
+.redes a img:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.logo {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+}
+
+.logo:hover {
+  opacity: .8;
+}
+
+.menu {
+  display: block;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.navbar {
+  position: absolute;
+  top: 45px;
+  right: 10px;
+  display: none;
+  flex-direction: column;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+  z-index: 10;
+}
+
+.navbar.active {
+  display: flex;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.navbar a:hover {
+  color: #555;
+}
+
+/* SOBRE */
+
+.sobre {
+  padding: 25px;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #111;
+}
+
+/* PROJETOS */
+
+.projetos {
+  padding: 0 20px;
+}
+
+.projetos h2 {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.projetos p {
+  font-size: 8px;
+  margin-bottom: 15px;
+}
+
+.card {
+  background: #29205f;
+  border-radius: 22px;
+  padding: 13px;
+  margin-bottom: 25px;
+  text-align: center;
+  color: white;
+}
+
+.card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.card h3 {
+  font-size: 11px;
+  margin-top: 8px;
+  font-weight: normal;
+}
+
+.card span {
+  display: block;
+  font-size: 7px;
+  margin-bottom: 8px;
+}
+
+.card button {
+  width: 80px;
+  height: 18px;
+  border: none;
+  border-radius: 20px;
+  font-size: 9px;
+  cursor: pointer;
+  background: linear-gradient(to right, white, #999);
+}
+
+/* CONTATO */
+
+.contato {
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.contato h2 {
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 25px;
+}
+
+form {
+  background: #45349b;
+  padding: 15px;
+  border-radius: 20px;
+  text-align: left;
+}
+
+label {
+  font-size: 8px;
+  color: black;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 8px;
+  margin-bottom: 10px;
+  background: linear-gradient(to right, white, #777);
+  font-size: 8px;
+}
+
+textarea {
+  height: 75px;
+  resize: none;
+}
+
+form button {
+  display: block;
+  margin: 5px auto 0;
+  width: 120px;
+  height: 24px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(to right, white, #999);
+  cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #4b3b90;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 11px;
+  color: white;
+}
+
+.icons {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* DESKTOP */
+
+@media (min-width: 768px) {
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  header {
+    padding: 0 40px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .navbar {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .navbar a {
+    color: white;
+    margin-bottom: 0;
+    margin-left: 25px;
+  }
+
+  .sobre {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .projetos {
+    padding: 30px 60px;
+  }
+
+  .projetos h2,
+  .projetos p {
+    text-align: center;
+  }
+
+  .card {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px 1%;
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  .contato {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  footer {
+    margin-top: 30px;
+  }
+}
